@@ -44,7 +44,6 @@ public class WebEditText extends LinearLayout implements View.OnClickListener, H
     public WebEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        initServer();
         setOrientation(VERTICAL);
 
         mEditText = new EditText(context);
@@ -54,6 +53,12 @@ public class WebEditText extends LinearLayout implements View.OnClickListener, H
         mBtn.setText("start server");
         mBtn.setOnClickListener(this);
         addView(mBtn);
+    }
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+        initServer();
     }
 
     private void initServer() {
@@ -105,7 +110,9 @@ public class WebEditText extends LinearLayout implements View.OnClickListener, H
     }
 
     private void updateEditText(String newContent) {
+        System.out.println("newContent = " + newContent);
         mEditText.setText(newContent);
+        mEditText.setSelection(newContent.length());
     }
 
     private void showServerInfo() {
@@ -134,6 +141,11 @@ public class WebEditText extends LinearLayout implements View.OnClickListener, H
             // for now eat exceptions
         }
         return "";
+    }
+
+    public void stopServer() {
+        System.out.println("WebEditText.stopServer");
+        mServer.stop();
     }
 
     @Override

@@ -4,14 +4,20 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.bettycc.webedittext.library.WebEditText;
 
 
 public class MyActivity extends ActionBarActivity {
+
+    private WebEditText mEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
+        mEditText = (WebEditText)findViewById(R.id.edit_text);
     }
 
 
@@ -20,6 +26,12 @@ public class MyActivity extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.my, menu);
         return true;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mEditText.stopServer();
     }
 
     @Override

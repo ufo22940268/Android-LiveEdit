@@ -9,6 +9,7 @@
     tools:context=".MyActivity">
 
     <com.bettycc.webedittext.library.WebEditText
+        android:id="@+id/edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
