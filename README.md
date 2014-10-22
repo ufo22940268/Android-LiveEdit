@@ -16,7 +16,7 @@ Usage
 
 Import `library` module to your project.
 
-**Step2**
+**Step2:**
 
 Use WebEditText in your xml file like this:
 
@@ -24,6 +24,11 @@ Use WebEditText in your xml file like this:
         android:id="@+id/edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+        
+
+**Step3:**
+
+Use [WebEditText.stopServer](https://github.com/ufo22940268/Android-WebEditTextView/blob/master/library/src/main/java/com/bettycc/webedittext/library/WebEditText.java#L146) whenever you need to shut down the server.
 
 Demo download
 =====
