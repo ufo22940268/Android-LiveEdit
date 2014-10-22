@@ -9,6 +9,22 @@ Screenshot
 =====
 ![](./slide2.gif)
 
+Usage
+=====
+
+**Step1:**
+
+Import `library` module to your project.
+
+**Step2**
+
+Use WebEditText in your xml file like this:
+
+    <com.bettycc.webedittext.library.WebEditText
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 Demo download
 =====
 [link](http://pan.baidu.com/s/1jGJwzlG)
