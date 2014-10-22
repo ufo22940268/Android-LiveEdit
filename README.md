@@ -11,4 +11,4 @@ Screenshot
 
 Demo download
 =====
-[link](http://pan.baidu.com/s/1mg61c04)
+[link](http://pan.baidu.com/s/1jGJwzlG)
