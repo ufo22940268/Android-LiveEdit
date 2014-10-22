@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        function submitText() {
+            var value = document.getElementById("edit-field").value
+            console.log(value)
+            post('update-field', value)
+        }
+
+        function post(url, obj) {
+            var xmlHttp = createXMLHttpRequest();
+            xmlHttp.open("POST", url, true);
+            xmlHttp.setRequestHeader("Content-Type",
+                    "application/x-www-form-urlencoded;");
+            xmlHttp.send(obj);
+        }
+
+        function createXMLHttpRequest() {
+            var xmlHttp;
+            if (window.XMLHttpRequest) {
+                xmlHttp = new XMLHttpRequest();
+                if (xmlHttp.overrideMimeType)
+                    xmlHttp.overrideMimeType('text/xml');
+            } else if (window.ActiveXObject) {
+                try {
+                    xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (e) {
+                    try {
+                        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (e) {
+                    }
+                }
+            }
+            return xmlHttp;
+        }
+
+
+    </script>
+    <title>
+    </title>
+</head>
+<body>
+<div><textarea onkeyup="if (event.keyCode == 13) { submitText(); return false; }" id="edit-field" style="height:300px; width: 400px"></textarea></div>
+<a style="display: inline-block; border: 1px solid #cccccc; padding: 5px 10px; border-radius: 4px; margin-top: 10px;" onclick="submitText()" >submit</a>
+</body>
+</html>
