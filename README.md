@@ -8,3 +8,7 @@ So `WebEditText` will delegate the input task to your pc, and when completed the
 Screenshot
 =====
 ![](./slide2.gif)
+
+Demo download
+=====
+[link](http://pan.baidu.com/s/1mg61c04)
