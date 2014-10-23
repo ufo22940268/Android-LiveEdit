@@ -1,4 +1,4 @@
-Android-WebEditText
+Android-LiveEdit
 ===================
 
 A EditText which can input text content with pc web brower.
