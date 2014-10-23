@@ -9,6 +9,27 @@ Screenshot
 =====
 ![](./slide2.gif)
 
+Usage
+=====
+
+**Step1:**
+
+Import `library` module to your project.
+
+**Step2:**
+
+Use WebEditText in your xml file like this:
+
+    <com.bettycc.webedittext.library.WebEditText
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        
+
+**Step3:**
+
+Use [WebEditText.stopServer](https://github.com/ufo22940268/Android-WebEditTextView/blob/master/library/src/main/java/com/bettycc/webedittext/library/WebEditText.java#L146) whenever you need to shut down the server.
+
 Demo download
 =====
-[link](http://pan.baidu.com/s/1mg61c04)
+[link](http://pan.baidu.com/s/1jGJwzlG)
